@@ -28,12 +28,12 @@ public class Courier implements Worker {
         warehouse.incrementDeliveredOrder();
     }
     public void bonus(){
-        if(warehouse.getCountDeliveredOrders() < 10){
+        if(warehouse.getCountDeliveredOrders() < 10000){
             System.out.println("Бонус пока не доступен");
             return;
         }
         if (isPayed){
-            System.out.println("Бонус уже выплачен");
+            System.out.println("Бонус уже был выплачен");
             return;
         }
         System.out.println("Поздравим сборщика, работник месяца получает бонус!!");

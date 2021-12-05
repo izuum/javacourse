@@ -27,12 +27,12 @@ public class Picker implements Worker{
 
     }
     public void bonus(){
-        if (warehouse.getCountPickedOrders() < 10){
+        if (warehouse.getCountPickedOrders() < 10000){
             System.out.println("Бонус пока не доступен");
             return;
         }
         if(isPayed){
-            System.out.println("Бонус уже выплачен");
+            System.out.println("Бонус уже был выплачен");
             return;
         }
         System.out.println("Поздравим сборщика, выплатим бонус!!");

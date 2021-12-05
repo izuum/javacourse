@@ -13,7 +13,7 @@ public class Teacher extends Human {
     @Override
     public void printInfo(){
         super.printInfo();
-        System.out.printf("Этот преподаватель с именем %s \n", getName());
+        System.out.printf("Этот преподаватель с именем %s\n", getName());
     }
 
 

@@ -35,13 +35,13 @@ public class Airplane {
     }
 
     public void info(){
-        System.out.printf("Изготовитель: %s, год выпуска: %d, длина: %d, вес: %d, кол-во топлива в баке: %d.", producer, year, length, weight, fuel);
+        System.out.printf("Изготовитель: %s, год выпуска: %d, длина: %d, вес: %d, количество топлива в баке: %d.", producer, year, length, weight, fuel);
     }
     public void fillUp(int n){
         this.fuel = n;
     }
 
     public String toString(){
-        return "Изготовитель: " + producer + ", год выпуска: " + year + ", длина: " + length+ ", вес: " + weight + ", кол-во топлива в баке: " + fuel;
+        return "Изготовитель: " + producer + ", год выпуска: " + year + ", длина: " + length+ ", вес: " + weight + ", количество топлива в баке: " + fuel;
     }
 }

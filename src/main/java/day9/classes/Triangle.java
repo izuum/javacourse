@@ -1,11 +1,11 @@
 package day9.classes;
 
 public class Triangle extends Figure{
-    private int a;
-    private int b;
-    private int c;
+    private double a;
+    private double b;
+    private double c;
 
-    public Triangle(String color, int a, int b, int c){
+    public Triangle(String color, double a, double b, double c){
         super(color);
         this.a = a;
         this.b = b;

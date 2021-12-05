@@ -11,6 +11,6 @@ public class Human {
         this.name = name;
     }
     public void printInfo(){
-        System.out.printf("Этот человек с именем %s \n", name);
+        System.out.printf("Этот человек с именем %s\n", name);
     }
 }
