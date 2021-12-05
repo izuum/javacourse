@@ -44,11 +44,11 @@ public class Airplane {
 
     public static void compareAirplanes(Airplane airplane1, Airplane airplane2){
         if (airplane1.length > airplane2.length){
-            System.out.println("Первый самолет длиннее второго");
+            System.out.println("Первый самолет длиннее");
         } else if(airplane1.length == airplane2.length){
-            System.out.println("Их длины равны");
+            System.out.println("Длины самолетов равны");
         }else {
-            System.out.println("Второй самолет длиннее первого");
+            System.out.println("Второй самолет длиннее");
         }
 
     }
