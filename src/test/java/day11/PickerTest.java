@@ -1,7 +1,7 @@
-package day11.Task1;
+package day11;
 
-import day11.Task1.Classes.Picker;
-import day11.Task1.Classes.Warehouse;
+import day11.Classes.Picker;
+import day11.Classes.Warehouse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.laughingpanda.beaninject.Inject;

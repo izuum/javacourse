@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Task3 {
     public static void main(String[] args) {
-        List<MusicBand> bands = new ArrayList();
+        List<MusicBand> bands = new ArrayList<>();
         bands.add(new MusicBand("Green Day", 1986));
         bands.add(new MusicBand("Linkin Park", 1996));
         bands.add(new MusicBand("Limp Bizkit", 1994));
@@ -26,15 +26,14 @@ public class Task3 {
 
         groupsAfter2000(bands);
     }
-    public static void groupsAfter2000(List<MusicBand> bands){
+    public static List<MusicBand> groupsAfter2000(List<MusicBand> bands){
         List<MusicBand> groupAfter2000 = new ArrayList();
         for (MusicBand band : bands){
             if (band.getYear() > 2000){
                 groupAfter2000.add(band);
             }
         }
-        for (MusicBand band : groupAfter2000){
-            System.out.println(band);
+        return groupAfter2000;
         }
     }
-}
+

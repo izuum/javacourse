@@ -1,7 +1,7 @@
-package day11.Task1.Classes;
+package day11.Classes;
 
-public class Courier implements Worker {
-    private static final int SALARY_BONUS = 50000;
+public class Picker implements Worker{
+    private static final int SALARY_BONUS = 70000;
     private int salary;
     private boolean isPayed;
     private Warehouse warehouse;
@@ -13,31 +13,31 @@ public class Courier implements Worker {
     public boolean getIsPayed(){
         return isPayed;
     }
-
     public String toString(){
-        return "Курьер получает " + salary;
+        return "Сборщик получает " + salary;
     }
-    public Courier(Warehouse warehouse){
+    public Picker(Warehouse warehouse){
         this.salary = salary;
         this.isPayed = isPayed;
         this.warehouse = warehouse;
     }
-
     public void doWork(){
-        salary += 100;
-        warehouse.incrementDeliveredOrder();
+        salary+=80;
+        warehouse.incrementPickedOrder();
+
     }
     public void bonus(){
-        if(warehouse.getCountDeliveredOrders() < 10000){
+        if (warehouse.getCountPickedOrders() < 10000){
             System.out.println("Бонус пока не доступен");
             return;
         }
-        if (isPayed){
+        if(isPayed){
             System.out.println("Бонус уже был выплачен");
             return;
         }
-        System.out.println("Поздравим сборщика, работник месяца получает бонус!!");
+        System.out.println("Поздравим сборщика, выплатим бонус!!");
         salary+=SALARY_BONUS;
         isPayed = true;
     }
+
 }

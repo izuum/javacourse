@@ -1,9 +1,9 @@
 package day11.Task1;
 
-import day11.Task1.Classes.Courier;
-import day11.Task1.Classes.Picker;
-import day11.Task1.Classes.Warehouse;
-import day11.Task1.Classes.Worker;
+import day11.Classes.Courier;
+import day11.Classes.Picker;
+import day11.Classes.Warehouse;
+import day11.Classes.Worker;
 
 public class Task1 {
     public static void main(String[] args) {

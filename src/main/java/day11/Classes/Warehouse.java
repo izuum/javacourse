@@ -1,4 +1,4 @@
-package day11.Task1.Classes;
+package day11.Classes;
 
 public class Warehouse {
     private int countPickedOrders;
