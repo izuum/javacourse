@@ -8,7 +8,7 @@ import org.laughingpanda.beaninject.Inject;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class Day11CourierTest extends Tests.AbstractTest {
+class CourierTest extends Tests.AbstractTest {
 
     Warehouse w;
     Courier courier;
