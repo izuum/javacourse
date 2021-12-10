@@ -7,8 +7,9 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-        File outputText = new File("D:\\javacourse\\javacourse\\src\\main\\resources\\missing_shoes.txt");
-        File inputText = new File("D:\\javacourse\\javacourse\\src\\main\\resources\\shoes.txt");
+        String separator = File.separator;
+        File inputText = new File("src" + separator + "main" + separator + "resources" + separator + "shoes.csv").getAbsoluteFile();
+        File outputText = new File("src" + separator + "main" + separator + "resources" + separator + "missing_shoes.txt").getAbsoluteFile();
         outputText.getParentFile().mkdirs();
 
         try {
