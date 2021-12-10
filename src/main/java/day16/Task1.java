@@ -6,10 +6,7 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-        String separator = File.separator;
-        File file = new File("src" + separator + "main" + separator + "resources" + separator + "TestText.txt").getAbsoluteFile();
-
-        printResult(file);
+        printResult(pathDownloadsFile());
     }
     public static void printResult(File file){
         int sum = 0;
@@ -28,5 +25,10 @@ public class Task1 {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+    public static File pathDownloadsFile() {
+        String separator = File.separator;
+        File file = new File("src" + separator + "main" + separator + "resources" + separator + "TestText.txt").getAbsoluteFile();
+        return file;
     }
 }
