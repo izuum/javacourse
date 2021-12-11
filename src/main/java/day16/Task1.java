@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Task1 {
     public static void main(String[] args) {
-        printResult(pathDownloadsFile());
+        printResult(pathDownloadsFile("TestText.txt"));
     }
     public static void printResult(File file){
         int sum = 0;
@@ -26,9 +26,9 @@ public class Task1 {
             e.printStackTrace();
         }
     }
-    public static File pathDownloadsFile() {
+    public static File pathDownloadsFile(String fileName) {
         String separator = File.separator;
-        File file = new File("src" + separator + "main" + separator + "resources" + separator + "TestText.txt").getAbsoluteFile();
+        File file = new File("src" + separator + "main" + separator + "resources" + separator + fileName).getAbsoluteFile();
         return file;
     }
 }

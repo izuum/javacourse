@@ -8,15 +8,12 @@ import java.util.Scanner;
 
 public class Task2 {
     public static void main(String[] args) {
-        String separator = File.separator;
-        File file1 = new File("src" + separator + "main" + separator + "resources" + separator + "file1.txt").getAbsoluteFile();
-        File file2= new File("src" + separator + "main" + separator + "resources" + separator + "file2.txt").getAbsoluteFile();
-        file1.getParentFile().mkdirs();
-        file2.getParentFile().mkdirs();
+        pathDownloadsFile("file1").getParentFile().mkdirs();
+        pathDownloadsFile("file2").getParentFile().mkdirs();
 
-        printToFile1(file1);
-        printToFile2(file1, file2);
-        printResult(file2);
+        printToFile1(pathDownloadsFile("file1"));
+        printToFile2(pathDownloadsFile("file1"), pathDownloadsFile("file2"));
+        printResult(pathDownloadsFile("file2"));
 
     }
     public static void printToFile1(File file){
@@ -80,5 +77,10 @@ public class Task2 {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+    }
+    public static File pathDownloadsFile(String fileName) {
+        String separator = File.separator;
+        File file = new File("src" + separator + "main" + separator + "resources" + separator + fileName).getAbsoluteFile();
+        return file;
     }
 }
