@@ -3,6 +3,7 @@ package day16;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import static utility.PathFile.pathDownloadsFile;
 
 public class Task1 {
     public static void main(String[] args) {
@@ -10,7 +11,6 @@ public class Task1 {
     }
     public static void printResult(File file){
         int sum = 0;
-
         try {
             Scanner scanner = new Scanner(file);
             String line = scanner.nextLine();
@@ -26,9 +26,5 @@ public class Task1 {
             e.printStackTrace();
         }
     }
-    public static File pathDownloadsFile(String fileName) {
-        String separator = File.separator;
-        File file = new File("src" + separator + "main" + separator + "resources" + separator + fileName).getAbsoluteFile();
-        return file;
-    }
+
 }

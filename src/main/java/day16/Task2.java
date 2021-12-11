@@ -5,6 +5,8 @@ import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Random;
 import java.util.Scanner;
+import static utility.PathFile.pathDownloadsFile;
+
 
 public class Task2 {
     public static void main(String[] args) {
@@ -14,7 +16,6 @@ public class Task2 {
         printToFile1(pathDownloadsFile("file1"));
         printToFile2(pathDownloadsFile("file1"), pathDownloadsFile("file2"));
         printResult(pathDownloadsFile("file2"));
-
     }
     public static void printToFile1(File file){
         try {
@@ -42,20 +43,10 @@ public class Task2 {
                 if (count == 20){
                     count = 0;
                     sum = sum/20;
-                    pw1.print(sum + "  ");          //////////исправить на вывод вещественных чисел!!!!!!!!!!!
+                    pw1.println(sum + "  ");          //////////исправить на вывод вещественных чисел!!!!!!!!!!!
                     sum = 0;
                 }
             }
-            /*while (scanner.hasNextLine()){
-                sum += scanner.nextInt();
-                count++;
-                if (count == 20){
-                    count = 0;
-                    sum = sum / 20;
-                    pw1.println(sum);
-                    sum = 0;
-                }
-            }*/
             scanner.close();
             pw1.close();
         } catch (FileNotFoundException e) {
@@ -77,10 +68,5 @@ public class Task2 {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-    }
-    public static File pathDownloadsFile(String fileName) {
-        String separator = File.separator;
-        File file = new File("src" + separator + "main" + separator + "resources" + separator + fileName).getAbsoluteFile();
-        return file;
     }
 }

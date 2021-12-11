@@ -3,12 +3,13 @@ package day14;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import static utility.PathFile.pathDownloadsFile;
 
 public class Task1 {
     public static void main(String[] args){
-        File file = new File("src/main/java/day14/file/TestText.txt");
+        pathDownloadsFile("TestText.txt");
 
-        printSumDigits(file);
+        printSumDigits(pathDownloadsFile("TestText.txt"));
     }
     public static void printSumDigits(File file) {
 

@@ -5,9 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class Day16Task1Test extends Tests.AbstractTest {
+class Task1Test extends Tests.AbstractTest {
 
     @Test
     void test1() {

@@ -1,17 +1,19 @@
 package day14;
 
 import day14.Classes.Person;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import static utility.PathFile.pathDownloadsFile;
 
 public class Task3 {
     public static void main(String[] args) {
-        File file = new File("People.txt");
+        pathDownloadsFile("People.txt");
 
-        System.out.println(parseFileToObjList(file));
+        System.out.println(parseFileToObjList(pathDownloadsFile("People.txt")));
     }
     public static List<Person> parseFileToObjList(File file){
         try {

@@ -1,9 +1,9 @@
 package day15;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import static utility.PathFile.pathDownloadsFile;
 
 public class Task1 {
     public static void main(String[] args) {
@@ -23,10 +23,5 @@ public class Task1 {
         } catch (FileNotFoundException e) {
             System.out.println("Файл не найден");
         }
-    }
-    public static File pathDownloadsFile(String fileName) {
-        String separator = File.separator;
-        File file = new File("src" + separator + "main" + separator + "resources" + separator + fileName).getAbsoluteFile();
-        return file;
     }
 }

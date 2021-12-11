@@ -5,12 +5,13 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import static utility.PathFile.pathDownloadsFile;
 
 public class Task2 {
     public static void main(String[] args) {
-        File file = new File("People.txt");
+        pathDownloadsFile("People.txt");
 
-        System.out.println(parseFileToStringList(file));
+        System.out.println(parseFileToStringList(pathDownloadsFile("People.txt")));
     }
     public static List<String> parseFileToStringList(File file){
         try {
