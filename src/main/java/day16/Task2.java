@@ -10,12 +10,12 @@ import static utility.PathFile.pathDownloadsFile;
 
 public class Task2 {
     public static void main(String[] args) {
-        pathDownloadsFile("file1").getParentFile().mkdirs();
-        pathDownloadsFile("file2").getParentFile().mkdirs();
+        pathDownloadsFile("src/main/resources/file1.txt").getParentFile().mkdirs();
+        pathDownloadsFile("src/main/resources/file2.txt").getParentFile().mkdirs();
 
-        printToFile1(pathDownloadsFile("file1"));
-        printToFile2(pathDownloadsFile("file1"), pathDownloadsFile("file2"));
-        printResult(pathDownloadsFile("file2"));
+        printToFile1(pathDownloadsFile("src/main/resources/file1.txt"));
+        printToFile2(pathDownloadsFile("src/main/resources/file1.txt"), pathDownloadsFile("src/main/resources/file2.txt"));
+        printResult(pathDownloadsFile("src/main/resources/file2.txt"));
     }
     public static void printToFile1(File file){
         try {
@@ -43,7 +43,7 @@ public class Task2 {
                 if (count == 20){
                     count = 0;
                     sum = sum/20;
-                    pw1.println(sum + "  ");          //////////исправить на вывод вещественных чисел!!!!!!!!!!!
+                    pw1.println(sum + "  ");
                     sum = 0;
                 }
             }
