@@ -7,7 +7,7 @@ import static utility.PathFile.pathDownloadsFile;
 
 public class Task1 {
     public static void main(String[] args) {
-        printResult(pathDownloadsFile("TestText.txt"));
+        printResult(pathDownloadsFile("src/main/resources/TestText.txt"));
     }
     public static void printResult(File file){
         int sum = 0;
