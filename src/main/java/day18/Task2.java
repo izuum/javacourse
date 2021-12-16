@@ -2,18 +2,16 @@ package day18;
 
 public class Task2 {
     public static void main(String[] args) {
-        System.out.println(counter7(775775775));
-
+        System.out.println(numOfDigits(717771237, 7));
     }
-    public static int counter7(Integer n){
+    public static int numOfDigits(int n, int dig){ /// dig - искомое число, кол-во которого надо найти, n - число в котором искать
         if (n == 0){
             return 0;
         }
-        if (n%10 == 7){
-            return 1+counter7(n/10);
+        if (n % 10 == dig){
+            return 1 + numOfDigits(n/10, dig);
         }else{
-            return counter7(n/10);
+            return numOfDigits(n/10, dig);
         }
-
     }
 }
